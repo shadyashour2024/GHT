@@ -56,14 +56,14 @@ public class appData implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("ProblemRootCause")
 	private java.lang.String problemRootCause;
 
-	@org.kie.api.definition.type.Label("problemTasks")
-	private java.util.List<com.ght.problem.management.problemTask> problemTasks;
-
-	@org.kie.api.definition.type.Label(value = "assignToTech1")
+	@org.kie.api.definition.type.Label("assignToTech1")
 	private java.lang.String assignToTech1;
 
-	@org.kie.api.definition.type.Label(value = "assignToTech2")
+	@org.kie.api.definition.type.Label("assignToTech2")
 	private java.lang.String assignToTech2;
+
+	@org.kie.api.definition.type.Label(value = "problem_tasks")
+	private java.util.List<com.ght.problem.management.problem_Task> problem_tasks;
 
 	public appData() {
 	}
@@ -200,15 +200,6 @@ public class appData implements java.io.Serializable {
 		this.problemRootCause = problemRootCause;
 	}
 
-	public java.util.List<com.ght.problem.management.problemTask> getProblemTasks() {
-		return this.problemTasks;
-	}
-
-	public void setProblemTasks(
-			java.util.List<com.ght.problem.management.problemTask> problemTasks) {
-		this.problemTasks = problemTasks;
-	}
-
 	public java.lang.String getAssignToTech1() {
 		return this.assignToTech1;
 	}
@@ -242,7 +233,6 @@ public class appData implements java.io.Serializable {
 			java.lang.String rootCauseAnalysisNote,
 			java.lang.String solutionApplyNote,
 			java.lang.String problemRootCause,
-			java.util.List<com.ght.problem.management.problemTask> problemTasks,
 			java.lang.String assignToTech1, java.lang.String assignToTech2) {
 		this.problem = problem;
 		this.managerStatus = managerStatus;
@@ -260,9 +250,58 @@ public class appData implements java.io.Serializable {
 		this.rootCauseAnalysisNote = rootCauseAnalysisNote;
 		this.solutionApplyNote = solutionApplyNote;
 		this.problemRootCause = problemRootCause;
-		this.problemTasks = problemTasks;
 		this.assignToTech1 = assignToTech1;
 		this.assignToTech2 = assignToTech2;
+	}
+
+	public java.util.List<com.ght.problem.management.problem_Task> getProblem_tasks() {
+		return this.problem_tasks;
+	}
+
+	public void setProblem_tasks(
+			java.util.List<com.ght.problem.management.problem_Task> problem_tasks) {
+		this.problem_tasks = problem_tasks;
+	}
+
+	public appData(
+			com.ght.problem.management.problem problem,
+			java.lang.Boolean managerStatus,
+			java.lang.Boolean solutionApproved,
+			java.lang.String instanceStatus,
+			java.util.List<java.lang.String> availableSolutions,
+			java.lang.String selectedSolution,
+			java.lang.String creationNote,
+			java.lang.String problemManagerNote,
+			java.lang.String problemReviewNote,
+			java.lang.String reviewAndConfirmNote,
+			java.lang.String investigationAndDiagnosisNote,
+			java.lang.String solutionEvaluationNote,
+			java.lang.String solutionConfirmationNote,
+			java.lang.String rootCauseAnalysisNote,
+			java.lang.String solutionApplyNote,
+			java.lang.String problemRootCause,
+			java.lang.String assignToTech1,
+			java.lang.String assignToTech2,
+			java.util.List<com.ght.problem.management.problem_Task> problem_tasks) {
+		this.problem = problem;
+		this.managerStatus = managerStatus;
+		this.solutionApproved = solutionApproved;
+		this.instanceStatus = instanceStatus;
+		this.availableSolutions = availableSolutions;
+		this.selectedSolution = selectedSolution;
+		this.creationNote = creationNote;
+		this.problemManagerNote = problemManagerNote;
+		this.problemReviewNote = problemReviewNote;
+		this.reviewAndConfirmNote = reviewAndConfirmNote;
+		this.investigationAndDiagnosisNote = investigationAndDiagnosisNote;
+		this.solutionEvaluationNote = solutionEvaluationNote;
+		this.solutionConfirmationNote = solutionConfirmationNote;
+		this.rootCauseAnalysisNote = rootCauseAnalysisNote;
+		this.solutionApplyNote = solutionApplyNote;
+		this.problemRootCause = problemRootCause;
+		this.assignToTech1 = assignToTech1;
+		this.assignToTech2 = assignToTech2;
+		this.problem_tasks = problem_tasks;
 	}
 
 }
